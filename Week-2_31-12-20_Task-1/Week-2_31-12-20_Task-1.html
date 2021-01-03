@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <style>
+            #aa {
+                position: relative;
+                top: 100px;
+                left: 420px;
+            }
+            #bb {
+                position: relative;
+                top: 200px;
+                left: 190px;
+            }
+            #sub {
+                position: relative;
+                top: 300px;
+                left: 70px;
+            }
+            .label_1 {
+                position: relative;
+                top: 100px;
+                left: 410px;
+            }
+            .label_2 {
+                position: relative;
+                top: 200px;
+                left: 180px;
+            }
+        </style>
+
+        <script type="text/javascript">
+            function correct() {
+                var x = String(document.getElementById("aa").value);
+                var y = String(document.getElementById("bb").value);
+                var z = y.length;
+                if (x == "Arshad" && y == "123456789") {
+                    alert("Welcome " + x);
+                } else if (x == "Arshad" && z <= 8) {
+                    alert("Password length is too short");
+                } else if (x == "" || x == null) {
+                    alert("Fill The Empty cells");
+                } else if (y == "" || y == null) {
+                    alert("Password is Empty");
+                } else {
+                    alert("Check Details..They Are Invalid");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <link rel="stylesheet" type="text/css" href="java11.css" />
+        <label for="user" class="label_1">Username:</label>
+        <input type="text" id="aa" name="a" />
+        <label for="user" class="label_2">Password:</label>
+        <input type="text" id="bb" name="b" />
+        <button id="sub" onclick="correct()">Submit</button>
+    </body>
+</html>
