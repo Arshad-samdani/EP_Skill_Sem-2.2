@@ -1,0 +1,145 @@
+<html>
+    <head>
+        <style>
+            .ez{
+	
+    background-image: url("pic.jpg");
+    background-size: 2000px;
+    background-repeat: no-repeat;
+}
+#ez1{
+  background-color: white;
+}
+.ez2{
+  position: relative;
+  top: 15px;
+  left: 700px;
+}
+
+#add{
+   height:100px;
+}
+        </style>
+<script type="text/javascript">
+
+function correct()
+{
+  var x =String(document.getElementById("name").value);
+var y =String(document.getElementById("branch").value);
+var z =String(document.getElementById("rollno").value);
+var a =String(document.getElementById("email").value);
+  var b =String(document.getElementById("username").value);
+  var o = document.getElementById('male');
+var t = document.getElementById('female');
+var e=document.getElementById('cric');
+var f=document.getElementById('tennis');
+var g=document.getElementById('chess');
+var c=String(document.getElementById("add").value);
+
+  if(x=="" || y=="" || z=="" || a=="" || b=="" || c=="") 
+  {
+alert("Fill Empty Cells");
+}
+else if(x.length<8)
+{
+  alert("length of name is too short");
+}
+else if(y.length==1 || y.length>3)
+{
+  alert("No such branch called  " + y );
+}
+else if(z.length<9 || z.length>9){
+  alert("Enter Roll No properly")
+}
+else if (!a.includes("@") || !a.includes(".") ){
+  alert("Enter Email properly")
+}
+ else if (!b.includes("_"))
+ {
+  alert("Enter username with underscore ")
+ }
+  
+else if( (o.checked == false ) && (t.checked == false ) )
+{
+alert("Select Gender");
+}
+else if( (e.checked == false ) && (f.checked == false ) && (g.checked == false) )
+{
+alert("Select Your Fav game");
+}
+
+else if(c.length<8)
+{
+  alert("Give Detailed Address");
+}
+else{
+  alert("Details Recorded");
+}
+}
+</script>
+
+</head>
+
+<body>
+    <h1>registration form</h1>
+<div class="ez">
+<h2 ALIGN="CENTER" style="color:white">Registration form</h2></div>
+
+
+<table>
+<tbody id="ez1">
+
+<tr>
+<td><label for="name">Name: </label></td>
+<td><input id="name"  name="name" type="text" /></td>
+</tr>
+
+
+<tr>
+<td><label for="branch">Branch: </label></td>
+<td><input id="branch" name="branch" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="rolln0">Rollno: </label></td>
+<td><input id="rollno"  name="rollno" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="email">Email_Address:</label></td>
+<td><input id="email"  name="email" type="text" /></td>
+</tr>
+
+<tr>
+<td><label for="username">User_Name:</label></td>
+<td><input id="username"  name="username" type="text" /></td>
+</tr>
+
+<tr>
+	<td><label for ="gend">Gender </td>
+		<td>  <input type="radio" id="male" name="gender" value="male">
+  <label for="male">Male</label><br>
+  <input type="radio" id="female" name="gender" value="female">
+  <label for="female">Female</label><br> 
+</tr>
+<tr>
+	<td><label for ="q">Fav game </td>
+		<td>  <input type="checkbox" id="cric" name="game" value="Cricket">
+  <label for="male">Cricket</label><br>
+  <input type="checkbox" id="tennis" name="game" value="Tennis">
+  <label for="female">Tennis</label><br> 
+    <input type="checkbox" id="chess" name="game" value="Cricket">
+  <label for="female">Chess</label><br> 
+</tr>
+
+<tr>
+<td><label for="address">Address:</label></td>
+<td><input id="add"  name="addresss" type="text" /></td>
+</tr>
+
+</tbody>
+</table>
+
+<button id="sub" class="ez2" onclick="correct()"> Submit</button>
+</body>
+</html>
