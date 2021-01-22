@@ -8,17 +8,18 @@ create table employee(
     Dept varchar(200),
     DOB date,
     salary int,
-    Designation varchar(20)
+    Designation varchar(200)
 );
 
 desc employee;
 
-insert into employee value ('A',101,29,'cyber security','1990-10-20',30000,'Manager');
-insert into employee value ('B',102,30,'IT','1989-01-10',24000,'Line Manager');
-insert into employee value ('C',103,26,'HR','1995-08-2',32000,'Team Leader');
-insert into employee value ('D',104,22,'cyber security','1999-06-25',28000,'People Manager');
-insert into employee value ('E',105,33,'cyber security','1987-12-14',29000,'Transition Manager');
-insert into employee value ('F',106,30,'cyber security','1989-02-14',32000,'Senior Manager');
+insert into employee (NAME, ID, AGE, Dept, DOB, salary, Designation) 
+values ('A',101,29,'cyber security','1990-10-20',30000,'Manager'),
+       ('B',102,30,'IT','1989-01-10',24000,'Line Manager'),
+       ('C',103,26,'HR','1995-08-2',32000,'Team Leader'),
+       ('D',104,22,'cyber security','1999-06-25',28000,'People Manager'),
+       ('E',105,33,'cyber security','1987-12-14',29000,'Transition Manager'),
+       ('F',106,30,'cyber security','1989-02-14',32000,'Senior Manager');
 
 SELECT * FROM employee;
 
